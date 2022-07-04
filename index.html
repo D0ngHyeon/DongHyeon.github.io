@@ -5,12 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <title>WestMoon</title>
+  <title>DongTest</title>
 </head>
 <body>
   <model-viewer 
   id="model-viewer"
   animation-name="modelAnim"
+  reveal="interaction"
   src="./MAIN/ASSET/GLB/malegolf_fullswing.glb"
   autoplay
   shadow-intensity="1" 
@@ -51,20 +52,20 @@
     function pause(){
   //alert("작동")
   const modelViewer = document.querySelector('#model-viewer');
-  modelViewer.animationName = 'modelAnim';
+  //modelViewer.animationName = 'modelAnim';
   modelViewer.pause();
 }
 
 function play(){
   const modelViewer = document.querySelector('#model-viewer');
-  modelViewer.animationName = 'modelAnim';
+  //modelViewer.animationName = 'modelAnim';
   //modelViewer.currentTime = 0;
   modelViewer.play();
 }
 
 function stop(){
   const modelViewer = document.querySelector('#model-viewer');
-  modelViewer.animationName = 'modelAnim';
+  //modelViewer.animationName = 'modelAnim';
   //modelViewer.currentTime = 0;
   modelViewer.currentTime = 0;
   modelViewer.pause();
