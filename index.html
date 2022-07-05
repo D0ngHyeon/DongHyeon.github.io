@@ -7,14 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <title>DongTest</title>
-  <link rel="preload" href="./MAIN/ASSET/GLB/malegolf_fullswing.glb" as="image" />
+  <!-- <link rel="preload" href="./MAIN/ASSET/GLB/malegolf_fullswing.glb" as="image" />
   <link rel="preload" href="./MAIN/ASSET/GLB/barbell_squat.glb" as="image" />
   <link rel="preload" href="./MAIN/ASSET/GLB/dumbbell_squat.glb" as="image" />
   <link rel="preload" href="./MAIN/ASSET/GLB/femalegolf_fullswing.glb" as="image" />
   <link rel="preload" href="./MAIN/ASSET/GLB/freestyle_waacking.glb" as="image" />
   <link rel="preload" href="./MAIN/ASSET/GLB/hiphop_itzy.glb" as="image" />
   <link rel="preload" href="./MAIN/ASSET/GLB/kettlebell_lunge.glb" as="image" />
-  <link rel="preload" href="./MAIN/ASSET/GLB/stretching_side_lunge.glb" as="image" />
+  <link rel="preload" href="./MAIN/ASSET/GLB/stretching_side_lunge.glb" as="image" /> -->
 </head>
 
 <body>
@@ -47,13 +47,14 @@
           style="background-image: url('./MAIN/ASSET/GLB/femalegolf_fullswing.png');">
         </button><button class="slide" onclick="switchSrc(this, 'freestyle_waacking')"
           style="background-image: url('./MAIN/ASSET/GLB/freestyle_waacking.png');">
-        </button><button class="slide" onclick="switchSrc(this, 'hiphop_itzy')"
+        </button>
+        <!-- <button class="slide" onclick="switchSrc(this, 'hiphop_itzy')"
           style="background-image: url('./MAIN/ASSET/GLB/hiphop_itzy.png');">
         </button><button class="slide" onclick="switchSrc(this, 'kettlebell_lunge')"
           style="background-image: url('./MAIN/ASSET/GLB/kettlebell_lunge.png');">
         </button><button class="slide" onclick="switchSrc(this, 'stretching_side_lunge')"
           style="background-image: url('./MAIN/ASSET/GLB/stretching_side_lunge.png');">
-        </button>
+        </button> -->
       </div>
     </div>
   </model-viewer>
@@ -97,38 +98,38 @@
       // Keep slider interactions from affecting the XR scene.
       ev.preventDefault();
     });
-    const images = [
-      "./MAIN/ASSET/GLB/malegolf_fullswing.glb",
-      "./MAIN/ASSET/GLB/barbell_squat.glb",
-      "./MAIN/ASSET/GLB/dumbbell_squat.glb",
-      "./MAIN/ASSET/GLB/femalegolf_fullswing.glb",
-      "./MAIN/ASSET/GLB/freestyle_waacking.glb",
-      "./MAIN/ASSET/GLB/hiphop_itzy.glb",
-      "./MAIN/ASSET/GLB/kettlebell_lunge.glb",
-      "./MAIN/ASSET/GLB/stretching_side_lunge.glb"
-    ];
+    // const images = [
+    //   "./MAIN/ASSET/GLB/malegolf_fullswing.glb",
+    //   "./MAIN/ASSET/GLB/barbell_squat.glb",
+    //   "./MAIN/ASSET/GLB/dumbbell_squat.glb",
+    //   "./MAIN/ASSET/GLB/femalegolf_fullswing.glb",
+    //   "./MAIN/ASSET/GLB/freestyle_waacking.glb",
+    //   "./MAIN/ASSET/GLB/hiphop_itzy.glb",
+    //   "./MAIN/ASSET/GLB/kettlebell_lunge.glb",
+    //   "./MAIN/ASSET/GLB/stretching_side_lunge.glb"
+    // ];
 
-    const preload = (images) => {
-      images.forEach((image) => {
-        const img = new Image();
-        img.src = image;
-      });
-    };
-    const addLoadEvent = (func) => {
-      const onloadEvent = window.onload;
-      if (typeof window.onload != 'function') {
-        window.onload = func;
-      } else{
-          window.onload = function() {
-            if (onloadEvent) {
-                onloadEvent();
-            }
-            func();
-          }
-        } 
-    }
+    // const preload = (images) => {
+    //   images.forEach((image) => {
+    //     const img = new Image();
+    //     img.src = image;
+    //   });
+    // };
+    // const addLoadEvent = (func) => {
+    //   const onloadEvent = window.onload;
+    //   if (typeof window.onload != 'function') {
+    //     window.onload = func;
+    //   } else{
+    //       window.onload = function() {
+    //         if (onloadEvent) {
+    //             onloadEvent();
+    //         }
+    //         func();
+    //       }
+    //     } 
+    // }
 
-    addLoadEvent(preload(images));
+    // addLoadEvent(preload(images));
 
 
   </script>
