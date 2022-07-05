@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,132 +10,139 @@
   <link rel="preload" href="./MAIN/ASSET/GLB/malegolf_fullswing.glb" as="object" />
   <link rel="preload" href="./MAIN/ASSET/GLB/barbell_squat.glb" as="object" />
   <link rel="preload" href="./MAIN/ASSET/GLB/dumbbell_squat.glb" as="object" />
-  <link rel="preload" href="./MAIN/ASSET/GLB/femalegolf_fullswing.glb" as="object"/>
-  <link rel="preload" href="./MAIN/ASSET/GLB/freestyle_waacking.glb" as="object"/>
-  <link rel="preload" href="./MAIN/ASSET/GLB/hiphop_itzy.glb" as="object"/>
+  <link rel="preload" href="./MAIN/ASSET/GLB/femalegolf_fullswing.glb" as="object" />
+  <link rel="preload" href="./MAIN/ASSET/GLB/freestyle_waacking.glb" as="object" />
+  <link rel="preload" href="./MAIN/ASSET/GLB/hiphop_itzy.glb" as="object" />
   <link rel="preload" href="./MAIN/ASSET/GLB/kettlebell_lunge.glb" as="object" />
   <link rel="preload" href="./MAIN/ASSET/GLB/stretching_side_lunge.glb" as="object" />
-
-  
 </head>
+
 <body>
-  <model-viewer 
-  id="model-viewer"
-  animation-name="modelAnim"
-  src="./MAIN/ASSET/GLB/malegolf_fullswing.glb"
-  autoplay
-  shadow-intensity="1" 
-  ar 
-  ar-modes="webxr scene-viewer quick-look" 
-  camera-controls 
-  >
+  <model-viewer id="model-viewer" animation-name="modelAnim" src="./MAIN/ASSET/GLB/malegolf_fullswing.glb" autoplay
+    shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls>
     <button slot="ar-button" id="ar-button">
       View in your space
     </button>
-  
+
     <div id="ar-prompt">
       <img src="./MAIN/ASSET/GLB/hand.png">
     </div>
-  
+
     <button id="ar-failure">
       AR is not tracking!
     </button>
-  
+
     <!-- <button onclick="play()" class="controlsbtn" type="button">Play</button>
     <button onclick="pause()" class="controlsbtn" type="button">Pause</button>
     <button onclick="stop()" class="controlsbtn" type="button">Stop</button> -->
     <div class="slider">
       <div class="slides">
-        <button class="slide selected" onclick="switchSrc(this, 'malegolf_fullswing')" style="background-image: url('./MAIN/ASSET/GLB/malegolf_fullswing.png');">
-        </button><button class="slide" onclick="switchSrc(this, 'barbell_squat')" style="background-image: url('./MAIN/ASSET/GLB/barbell_squat.png');">  
-        </button><button class="slide" onclick="switchSrc(this, 'dumbbell_squat')" style="background-image: url('./MAIN/ASSET/GLB/dumbbell_squat.png');"> 
-        </button><button class="slide" onclick="switchSrc(this, 'femalegolf_fullswing')" style="background-image: url('./MAIN/ASSET/GLB/femalegolf_fullswing.png');">        
-        </button><button class="slide" onclick="switchSrc(this, 'freestyle_waacking')" style="background-image: url('./MAIN/ASSET/GLB/freestyle_waacking.png');"> 
-        </button><button class="slide" onclick="switchSrc(this, 'hiphop_itzy')" style="background-image: url('./MAIN/ASSET/GLB/hiphop_itzy.png');">        
-        </button><button class="slide" onclick="switchSrc(this, 'kettlebell_lunge')" style="background-image: url('./MAIN/ASSET/GLB/kettlebell_lunge.png');">
-        </button><button class="slide" onclick="switchSrc(this, 'stretching_side_lunge')" style="background-image: url('./MAIN/ASSET/GLB/stretching_side_lunge.png');">
+        <button class="slide selected" onclick="switchSrc(this, 'malegolf_fullswing')"
+          style="background-image: url('./MAIN/ASSET/GLB/malegolf_fullswing.png');">
+        </button><button class="slide" onclick="switchSrc(this, 'barbell_squat')"
+          style="background-image: url('./MAIN/ASSET/GLB/barbell_squat.png');">
+        </button><button class="slide" onclick="switchSrc(this, 'dumbbell_squat')"
+          style="background-image: url('./MAIN/ASSET/GLB/dumbbell_squat.png');">
+        </button><button class="slide" onclick="switchSrc(this, 'femalegolf_fullswing')"
+          style="background-image: url('./MAIN/ASSET/GLB/femalegolf_fullswing.png');">
+        </button><button class="slide" onclick="switchSrc(this, 'freestyle_waacking')"
+          style="background-image: url('./MAIN/ASSET/GLB/freestyle_waacking.png');">
+        </button><button class="slide" onclick="switchSrc(this, 'hiphop_itzy')"
+          style="background-image: url('./MAIN/ASSET/GLB/hiphop_itzy.png');">
+        </button><button class="slide" onclick="switchSrc(this, 'kettlebell_lunge')"
+          style="background-image: url('./MAIN/ASSET/GLB/kettlebell_lunge.png');">
+        </button><button class="slide" onclick="switchSrc(this, 'stretching_side_lunge')"
+          style="background-image: url('./MAIN/ASSET/GLB/stretching_side_lunge.png');">
         </button>
       </div>
     </div>
   </model-viewer>
   <script>
-    function preloading (glbArray) {
+    function preloading(glbArray) {
       var n = glbArray.length;
       for (var i = 0; i < n; i++) {
-        var img = new 
-        img.src = glbArray[i];
+        var img = new
+          img.src = glbArray[i];
       }
     }
     preloading([
-    '1.png',
-    '2.png',
-    '3.png'
+      'malegolf_fullswing.glb',
+      'barbell_squat.glb',
+      'dumbbell_squat.glb',
+      'femalegolf_fullswing.glb',
+      'freestyle_waacking.glb',
+      'hiphop_itzy.glb',
+      'kettlebell_lunge.glb',
+      'stretching_side_lunge.glb'
     ])
 
-    function pause(){
-    //alert("작동")
+    function pause() {
+      //alert("작동")
       const modelViewer = document.querySelector('#model-viewer');
       //modelViewer.animationName = 'modelAnim';
       modelViewer.pause();
     }
 
-function play(){
-  const modelViewer = document.querySelector('#model-viewer');
-  //modelViewer.animationName = 'modelAnim';
-  //modelViewer.currentTime = 0;
-  modelViewer.play();
-}
+    function play() {
+      const modelViewer = document.querySelector('#model-viewer');
+      //modelViewer.animationName = 'modelAnim';
+      //modelViewer.currentTime = 0;
+      modelViewer.play();
+    }
 
-function stop(){
-  const modelViewer = document.querySelector('#model-viewer');
-  //modelViewer.animationName = 'modelAnim';
-  //modelViewer.currentTime = 0;
-  modelViewer.currentTime = 0;
-  modelViewer.pause();
-}
+    function stop() {
+      const modelViewer = document.querySelector('#model-viewer');
+      //modelViewer.animationName = 'modelAnim';
+      //modelViewer.currentTime = 0;
+      modelViewer.currentTime = 0;
+      modelViewer.pause();
+    }
   </script>
-  
+
   <script type="module">
     const modelViewer = document.querySelector("model-viewer");
-  
+
     window.switchSrc = (element, name) => {
       const base = "./MAIN/ASSET/GLB/" + name;
       modelViewer.src = base + '.glb';
       modelViewer.poster = base + '.png';
       const slides = document.querySelectorAll(".slide");
-      slides.forEach((element) => {element.classList.remove("selected");});
+      slides.forEach((element) => { element.classList.remove("selected"); });
       element.classList.add("selected");
     };
-  
+
     document.querySelector(".slider").addEventListener('beforexrselect', (ev) => {
       // Keep slider interactions from affecting the XR scene.
       ev.preventDefault();
     });
   </script>
-  
+
   <style>
     /* This keeps child nodes hidden while the element loads */
     /* @import "reset.css"; */
-    :not(:defined) > * {
+    :not(:defined)>* {
       margin: 0;
       padding: 0;
       display: none;
     }
-    html{
+
+    html {
       margin: 0;
       padding: 0;
       height: 100%;
       width: 100%;
     }
+
     body {
       margin: 0;
       padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: Google Sans, Noto, Roboto, Helvetica Neue, sans-serif;
-    color: #353535;
-    background-color: #353535;
+      width: 100%;
+      height: 100%;
+      font-family: Google Sans, Noto, Roboto, Helvetica Neue, sans-serif;
+      color: #353535;
+      background-color: #353535;
     }
+
     model-viewer {
       height: 100%;
       width: 100%;
@@ -143,7 +151,7 @@ function stop(){
       overflow-x: hidden;
       --poster-color: #232323;
     }
-  
+
     #ar-button {
       background-image: url(./MAIN/ASSET/GLB/ARbtn.png);
       background-repeat: no-repeat;
@@ -158,63 +166,74 @@ function stop(){
       padding: 0px 16px 0px 40px;
       font-family: Roboto Regular, Helvetica Neue, sans-serif;
       font-size: 14px;
-      color: #000;;
+      color: #000;
+      ;
       height: 36px;
       line-height: 36px;
       border-radius: 18px;
       border: 1px solid #FFFF00;
     }
-  
+
     #ar-button:active {
       background-color: #E8EAED;
     }
-  
+
     #ar-button:focus {
       outline: none;
     }
-  
+
     #ar-button:focus-visible {
       outline: 1px solid #4285f4;
     }
-  
+
     @keyframes circle {
-      from { transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg); }
-      to   { transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg); }
+      from {
+        transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg);
+      }
+
+      to {
+        transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg);
+      }
     }
-  
+
     @keyframes elongate {
-      from { transform: translateX(100px); }
-      to   { transform: translateX(-100px); }
+      from {
+        transform: translateX(100px);
+      }
+
+      to {
+        transform: translateX(-100px);
+      }
     }
-  
-    model-viewer > #ar-prompt {
+
+    model-viewer>#ar-prompt {
       position: absolute;
       left: 50%;
       bottom: 175px;
       animation: elongate 2s infinite ease-in-out alternate;
       display: none;
     }
-  
-    model-viewer[ar-status="session-started"] > #ar-prompt {
+
+    model-viewer[ar-status="session-started"]>#ar-prompt {
       display: block;
     }
-  
-    model-viewer > #ar-prompt > img {
+
+    model-viewer>#ar-prompt>img {
       animation: circle 4s linear infinite;
     }
-  
-    model-viewer > #ar-failure {
+
+    model-viewer>#ar-failure {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
       bottom: 175px;
       display: none;
     }
-  
-    model-viewer[ar-tracking="not-tracking"] > #ar-failure {
+
+    model-viewer[ar-tracking="not-tracking"]>#ar-failure {
       display: block;
     }
-  
+
     .slider {
       width: 100%;
       text-align: auto;
@@ -222,7 +241,7 @@ function stop(){
       position: absolute;
       bottom: 16px;
     }
-  
+
     .slides {
       display: flex;
       overflow-x: auto;
@@ -230,7 +249,7 @@ function stop(){
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
     }
-  
+
     .slide {
       margin: auto;
       display: block;
@@ -244,20 +263,21 @@ function stop(){
       background-color: #fff;
       border-radius: 10px;
       border: none;
-     
+
     }
-  
+
     .slide.selected {
       border: 2px solid #4285f4;
     }
-  
+
     .slide:focus {
       outline: none;
     }
-  
+
     .slide:focus-visible {
       outline: 1px solid #4285f4;
     }
+
     /* .controlsbtn{
       border: 5px;
       top: 10%;
@@ -267,58 +287,18 @@ function stop(){
       background-color:wheat;
       border-end-start-radius: 10;
     } */
-    
+
 
     #card {
-    margin: 3em auto;
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    border-radius: 6px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
+      margin: 3em auto;
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      border-radius: 6px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
     }
-
-    /* model-viewer {
-    width: 100%;
-    height: 900px;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    background-color: #353535;
-    } */
-
-  /* .attribution {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 1em;
-  }
-
-  .attribution h1 {
-  margin: 0 0 0.25em;
-  }
-
-  .attribution img {
-  opacity: 0.5;
-  height: 2em;
-  }
-
-  .attribution .cc {
-  flex-shrink: 0;
-  text-decoration: none;
-  }
-
-  footer {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: auto;
-    text-align: center;
-    font-style: italic;
-    line-height: 1.5em;
-  } */
-  
   </style>
 </body>
+
 </html>
