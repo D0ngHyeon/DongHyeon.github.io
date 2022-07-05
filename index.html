@@ -14,7 +14,7 @@
   <link rel="preload" href="./MAIN/ASSET/GLB/freestyle_waacking.glb" as="image" />
   <link rel="preload" href="./MAIN/ASSET/GLB/hiphop_itzy.glb" as="image" />
   <link rel="preload" href="./MAIN/ASSET/GLB/kettlebell_lunge.glb" as="image" />
-  <link rel="preload" href="./MAIN/ASSET/GLB/stretching_side_lunge.glb" as="image"/>
+  <link rel="preload" href="./MAIN/ASSET/GLB/stretching_side_lunge.glb" as="image" />
 </head>
 
 <body>
@@ -97,6 +97,40 @@
       // Keep slider interactions from affecting the XR scene.
       ev.preventDefault();
     });
+    const images = [
+      "./MAIN/ASSET/GLB/malegolf_fullswing.glb",
+      "./MAIN/ASSET/GLB/barbell_squat.glb",
+      "./MAIN/ASSET/GLB/dumbbell_squat.glb",
+      "./MAIN/ASSET/GLB/femalegolf_fullswing.glb",
+      "./MAIN/ASSET/GLB/freestyle_waacking.glb",
+      "./MAIN/ASSET/GLB/hiphop_itzy.glb",
+      "./MAIN/ASSET/GLB/kettlebell_lunge.glb",
+      "./MAIN/ASSET/GLB/stretching_side_lunge.glb"
+    ];
+
+    const preload = (images) => {
+      images.forEach((image) => {
+        const img = new Image();
+        img.src = image;
+      });
+    };
+    const addLoadEvent = (func) => {
+      const onloadEvent = window.onload;
+      if (typeof window.onload != 'function') {
+        window.onload = func;
+      } else{
+          window.onload = function() {
+            if (onloadEvent) {
+                onloadEvent();
+            }
+            func();
+          }
+        } 
+    }
+
+    addLoadEvent(preload(images));
+
+
   </script>
   <style>
     /* This keeps child nodes hidden while the element loads */
