@@ -1,171 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <title>1번</title>
+  <title>MainPageTest</title>
 </head>
+
 <body>
-  <model-viewer
-  ar
-  ar-mode="quick-look webxr scnen-viewer"
-  camera-controls
-  src="./MAIN/ASSET/GLB/stretching_side_lunge.glb"
-  autoplay
-  shadow-intensity="1"
-  >
-  <button slot="ar-button" id="ar-button">
-    View in your space
-  </button>
-
-  <div id="ar-prompt">
-    <img src="./MAIN/ASSET/GLB/hand.png">
-  </div>
-
-  <button id="ar-failure">
-    AR is not tracking!
-  </button>
-  <div class="slider">
-    <div class="slides">
-      <button class="slide" onclick="location.href='./index.html'" style="background-image: url('./MAIN/ASSET/GLB/malegolf_fullswing.png');"></button>
-      <button class="slide" onclick="location.href='./test1.html'" style="background-image: url('./MAIN/ASSET/GLB/barbell_squat.png');"></button>
-      <button class="slide" onclick="location.href='./test2.html'" style="background-image: url('./MAIN/ASSET/GLB/dumbbell_squat.png');"></button>
-      <button class="slide" onclick="location.href='./test3.html'" style="background-image: url('./MAIN/ASSET/GLB/femalegolf_fullswing.png');"></button>
-      <button class="slide" onclick="location.href='./test4.html'" style="background-image: url('./MAIN/ASSET/GLB/freestyle_waacking.png');"></button>
-      <button class="slide" onclick="location.href='./test5.html'" style="background-image: url('./MAIN/ASSET/GLB/hiphop_itzy.png');"></button>
-      <button class="slide" onclick="location.href='./test6.html'" style="background-image: url('./MAIN/ASSET/GLB/kettlebell_lunge.png');"></button>
-      <button class="slide selected" onclick="location.href='./test7.html'" style="background-image: url('./MAIN/ASSET/GLB/stretching_side_lunge.png');"></button>
+  <section>
+    <h1>Scroll Down to Reveal Elements &#8595;</h1>
+  </section>
+  <section>
+    <div class="container reveal">
+      <h2>Caption</h2>
+      <div class="text-container">
+        <div class="text-box">
+          <h3>Male Golf</h3>
+          <p class="demo">
+            <button id="button_img" style="background-image: url('./MAIN/ASSET/GLB/malegolf_fullswing.png');"></button>
+            <ar-button 
+            id="ar-button" 
+            src="./MAIN/ASSET/GLB/malegolf_fullswing.glb"           
+            checkout-title="A 3D model of an astronaut"
+            checkout-subtitle="Doesn't feel like a giant. Probably feels very" 
+            price="very small."
+            call-to-action="Go to space" show-if-unsupported>
+            </ar-button>
+          </p>
+        </div>
+        <div class="text-box">
+          <h3>Section Text</h3>
+          <p>
+            <button id="button_img" style="background-image: url('./asset/malegolf/malegolf_fullswing.png');"></button>
+          </p>
+        </div>
+        <div class="text-box">
+          <h3>Section Text</h3>
+          <p>
+            <button id="button_img" style="background-image: url('./asset/malegolf/malegolf_fullswing.png');"></button>
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-  </model-viewer>
+  </section>
+
+  <section>
+    <div class="container reveal">
+      <h2>Caption</h2>
+      <div class="text-container">
+        <div class="text-box">
+          <h3>Male Golf</h3>
+          <p class="demo">
+            <button id="button_img" style="background-image: url('./asset/malegolf/malegolf_fullswing.png');"></button>
+            <ar-button 
+            id="ar-button" 
+            src="./asset/malegolf/malegolf_fullswing.glb"           
+            checkout-title="A 3D model of an astronaut"
+            checkout-subtitle="Doesn't feel like a giant. Probably feels very" 
+            price="very small."
+            call-to-action="Go to space" show-if-unsupported>
+            </ar-button>
+          </p>
+        </div>
+        <div class="text-box">
+          <h3>Section Text</h3>
+          <p>
+            <button id="button_img" style="background-image: url('./asset/malegolf/malegolf_fullswing.png');"></button>
+          </p>
+        </div>
+        <div class="text-box">
+          <h3>Section Text</h3>
+          <p>
+            <button id="button_img" style="background-image: url('./asset/malegolf/malegolf_fullswing.png');"></button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container reveal">
+      <h2>Caption</h2>
+      <div class="text-container">
+        <div class="text-box">
+          <h3>Male Golf</h3>
+          <p class="demo">
+            <button id="button_img" style="background-image: url('./asset/malegolf/malegolf_fullswing.png');"></button>
+            <ar-button 
+            id="ar-button" 
+            src="./asset/malegolf/malegolf_fullswing.glb"           
+            checkout-title="A 3D model of an astronaut"
+            checkout-subtitle="Doesn't feel like a giant. Probably feels very" 
+            price="very small."
+            call-to-action="Go to space" show-if-unsupported>
+            </ar-button>
+          </p>
+        </div>
+        <div class="text-box">
+          <h3>Section Text</h3>
+          <p>
+            <button id="button_img" style="background-image: url('./asset/malegolf/malegolf_fullswing.png');"></button>
+          </p>
+        </div>
+        <div class="text-box">
+          <h3>Section Text</h3>
+          <p>
+            <button id="button_img" style="background-image: url('./asset/malegolf/malegolf_fullswing.png');"></button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <style>
-    :not(:defined)>* {
+    @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+    * {
       margin: 0;
       padding: 0;
-      display: none;
-    }
-    html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-    }
-    body{
-      margin: 0px;
-      border: 0px;
-      width: 100%;
-      height: 100%;
-    }
-    model-viewer{
-      height: 100%;
-      width: 100%;
-      background-color: #232323;
-    }
-    .slider {
-      width: 100%;
-      text-align: auto;
-      overflow: hidden;
-      position: absolute;
-      bottom: 16px;
+      box-sizing: border-box;
+      font-family: "Asap", sans-serif;
     }
 
-    .slides {
+    body {
+      background: #363636;
+    }
+
+    section {
+      min-height: 0vh;
       display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
+      justify-content: center;
+      align-items: center;
     }
 
-    .slide {
+    /*동적 생성되는 Section child 배경색 지정 
+    color : 글자색
+    bg : 배경색
+    defalut bg -> body 적용
+    */
+    section:nth-child(1) {
+      color: #e0ffff;
+    }
+
+    section:nth-child(2) {
+      color: #e0ffff;
+      
+    }
+
+    section:nth-child(3) {
+      color: #e0ffff;
+    }
+
+    section:nth-child(4) {
+      color: #e0ffff;
+      
+    }
+
+    section:nth-child(5) {
+      color: #e0ffff;
+    }
+
+    section:nth-child(6) {
+      color: #e0ffff;
+      
+    }
+
+    section:nth-child(7) {
+      color: #e0ffff;
+    }
+
+    section .container {
+      margin: 10px;
+    }
+
+    section h1 {
+      font-size: 3rem;
+      margin: 20px;
+    }
+
+    section h2 {
+      font-size: 40px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    section .text-container {
+      display: flex;
+    }
+
+    section .text-container .text-box {
+      margin: 20px;
+      padding: 20px;
+      
+    }
+
+    section .text-container .text-box h3 {
+      font-size: 30px;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 900px) {
+      section h1 {
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      section .text-container {
+        flex-direction: column;
+      }
+    }
+
+    .reveal {
+      position: relative;
+      transform: translateY(150px);
+      opacity: 0;
+      transition: 1s all ease;
+    }
+
+    .reveal.active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    #button_img {
       margin: auto;
       display: block;
       scroll-snap-align: start;
       flex-shrink: 0;
-      width: 100px;
-      height: 100px;
+      width: 300px;
+      height: 300px;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
       background-color: #fff;
       border-radius: 10px;
       border: none;
-
-    }
-
-    .slide.selected {
-      border: 2px solid #4285f4;
-    }
-
-    .slide:focus {
-      outline: none;
-    }
-
-    .slide:focus-visible {
-      outline: 1px solid #4285f4;
     }
     #ar-button {
-      background-image: url(./MAIN/ASSET/GLB/ARbtn.png);
-      background-repeat: no-repeat;
-      background-size: 20px 20px;
-      background-position: 12px 50%;
-      background-color: #FFFF00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      cursor: pointer;
+      background-color: #ffffff00;
+      color: #000000;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+      
+    }
+    .demo{
+      position: relative;
+    }
+    .demo>ar-button {
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      white-space: nowrap;
-      bottom: 132px;
-      padding: 0px 16px 0px 40px;
-      font-family: Roboto Regular, Helvetica Neue, sans-serif;
-      font-size: 14px;
-      color: #000;
-      ;
-      height: 36px;
-      line-height: 36px;
-      border-radius: 18px;
-      border: 1px solid #FFFF00;
+      right: 0rem;
+      bottom: 0rem;
+      width: 100%;
+      height: 100%;
     }
-    #ar-button:active {
-      background-color: #E8EAED;
-    }
-
-    #ar-button:focus {
-      outline: none;
-    }
-
-    #ar-button:focus-visible {
-      outline: 1px solid #4285f4;
-    }
-    model-viewer>#ar-prompt {
-      position: absolute;
-      left: 50%;
-      bottom: 175px;
-      animation: elongate 2s infinite ease-in-out alternate;
-      display: none;
-    }
-
-    model-viewer[ar-status="session-started"]>#ar-prompt {
-      display: block;
-    }
-
-    model-viewer>#ar-prompt>img {
-      animation: circle 4s linear infinite;
-    }
-
-    model-viewer>#ar-failure {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 175px;
-      display: none;
-    }
-
-    model-viewer[ar-tracking="not-tracking"]>#ar-failure {
-      display: block;
-    }
-
   </style>
+  <script>
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", reveal);
+
+
+  </script>
+  <!--source code : https://alvarotrigo.com/blog/css-animations-scroll/-->
 </body>
+
 </html>

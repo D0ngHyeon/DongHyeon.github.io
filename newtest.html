@@ -1,0 +1,152 @@
+<!-- /* Copyright (C) Omnivor, Inc - All Rights Reserved * Unauthorized copying of this file, via any medium is strictly prohibited * * BY USING OR ACCESSING THIS SOFTWARE YOU AGREE AS FOLLOWS: * * THIS SOFTWARE IS PROVIDED BY OMNIVOR, INC. (“OMNIVOR”) ”AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL OMNIVOR BE LIABLE FOR ANY DIRECT, INDIRECT INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION: HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. * * YOU MAY NOT COPY THIS FILE OR THE CONTENTS THEREOF, EXCEPT AS REASONABLY NECESSARY TO VIEW CONTENT PRESENTED TO YOU BY AN AUTHORIZED LICENSEE OF OMNIVOR FOR YOUR OWN PERSONAL AND NON-COMMERCIAL USE. * * THIS SOFTWARE INCLUDES PROPRIETARY, TRADE SECRET-INFORMATION OF OMNIVOR. YOU AGREE NOT TO USE THIS SOFTWARE FOR THE PURPOSE OF DEVELOPING ANY PRODUCT OR SERVICE THAT COMPETES WITH THE SOFTWARE OR OMNIVOR PRODUCTS OR TECHNOLOGY. * * */ -->
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+  <meta property="og:title" content="Need It Now" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Need It Now" />
+  <meta itemprop="name" content="Need It Now">
+  <meta name="twitter:title" content="Need It Now">
+  <meta property="og:site_name" content="Need It Now">
+  <meta name="image" content="https://nikevirtualview.com/needitnow/assets/Splash_Banner.png">
+  <meta itemprop="image" content="https://nikevirtualview.com/needitnow/assets/Splash_Banner.png">
+  <meta property="og:image" content="https://nikevirtualview.com/needitnow/assets/Splash_Banner.png">
+  <meta name="twitter:image" content="https://nikevirtualview.com/needitnow/assets/Splash_Banner.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Need It Now</title>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5MBMX6T');
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-functions.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-analytics.js"></script>
+  <script src="bowser.min.js"></script>
+  <script src="twgl-full.min.js"></script>
+  <script src="mux.min.js"></script>
+  <script src="shaka-player.compiled.js"></script>
+  <script src="three.min.js"></script>
+  <script src="omniweb.min.js?v=0"></script>
+  <script src="xrextras.js"></script>
+  <script async
+    src="https://apps.8thwall.com/xrweb?appKey=z8xzlCTGFXU00mXV6IXEIZyZf11SVvRt6EcvPQog8bESKGkTbmBDkZuJp1343T1W7NuPWn"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="spinkit.css">
+  <script type="text/javascript" src="runtime~main.4ec421fd7d78e249ab80.js"></script>
+  <script type="text/javascript" src="main.2051b82140ccef9576d0.js"></script>
+</head>
+
+<body> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MBMX6T" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript> <canvas id="camerafeed"></canvas>
+  <div id="label-wrapper" class="unselectable">
+    <div id="top-bar-gradient"></div>
+    <div id="button-container"> <button id="size-select-button" class="mdc-button mdc-button--raised">
+        <div class="mdc-button__ripple"></div> <span id="size-select-button-label" class="mdc-button__label">Size</span>
+        <i class="material-icons mdc-button__icon" aria-hidden="true">expand_more</i>
+      </button> <button id="shop-now-button" class="mdc-button mdc-button--unelevated">
+        <div class="mdc-button__ripple"></div> <span class="mdc-button__label">Shop Now</span>
+      </button> </div>
+    <div id="progress-circle" class="sk-chase">
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+    </div> <label id="start-label" class="unselectable rounded-element">Tap the screen to place the virtual
+      model</label>
+    <div id="size-list-group" class="mdc-list-group mdc-theme--background">
+      <h2 class="mdc-list-group__subheader">SIZES</h2>
+      <ul id="size-list" class="mdc-list"></ul>
+    </div> <button id="switch-group-button" class="mdc-button top-bar-button">
+      <div class="mdc-button__ripple"></div> <img class="material-icons mdc-button__icon" src="assets/grid_icon.png"
+        aria-hidden="true">
+    </button> <button id="detail-button" class="mdc-button top-bar-button">
+      <div class="mdc-button__ripple"></div> <img class="material-icons mdc-button__icon" src="assets/zoom_in.svg"
+        aria-hidden="true">
+    </button> <button id="freOpenButton" class="mdc-button top-bar-button">
+      <div class="mdc-button__ripple"></div> <img class="material-icons mdc-button__icon" src="assets/help.svg"
+        aria-hidden="true">
+    </button>
+    <div id="freContainer" class="unselectable rounded-element">
+      <div id="freInfoMenuAnchor" class="mdc-menu-surface--anchor"> <button id="freInfoButton"
+          class="mdc-button top-bar-button">
+          <div class="mdc-button__ripple"></div> <img class="material-icons mdc-button__icon" src="assets/info.svg"
+            aria-hidden="true">
+        </button>
+        <div id="freInfoMenu" class="mdc-menu mdc-menu-surface">
+          <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
+            <li class="mdc-list-item" role="menuitem"> <span class="mdc-list-item__ripple"></span> <span
+                class="mdc-list-item__text">Privacy Policy</span> </li>
+            <li class="mdc-list-item" role="menuitem"> <span class="mdc-list-item__ripple"></span> <span
+                class="mdc-list-item__text">Acknowledgements</span> </li>
+          </ul>
+        </div>
+      </div> <button id="freCloseButton" class="mdc-button freCornerButton text-button">
+        <div class="mdc-button__ripple"></div> <span class="mdc-button__label">Skip</span>
+      </button> <button id="freNextButton" class="mdc-button freCornerButton text-button">
+        <div class="mdc-button__ripple"></div> <span class="mdc-button__label">Next</span>
+      </button> <button id="freFinalButton" class="mdc-button freCornerButton text-button">
+        <div class="mdc-button__ripple"></div> <span class="mdc-button__label">Close</span>
+      </button>
+      <div id="fre0" class="frePage"> <img class="nikeLogo" src="assets/Logo_NIKE.svg"> <label class="titleText">WELCOME
+          TO NIKE VIRTUAL VIEW</label> <label class="freBody">View how Nike styles fit on a model in your size</label>
+      </div>
+      <div id="fre1" class="frePage"> <label class="titleText">SEE YOUR MODEL</label> <label class="freBody">Aim your
+          device at a flat space and tap the screen</label> </div>
+      <div id="fre2" class="frePage"> <label class="titleText">SELECT YOUR SIZE</label> <label class="freBody">Select
+          your size to see the style on the model</label> </div>
+      <div id="fre3" class="frePage"> <label class="titleText">EXPLORE</label>
+        <div class="freBody"> <label>Use a two-finger pinch to enhance the details of the product &#x2022; Swipe to
+            rotate the model &#x2022; Tap the screen again to place the model in a new location</label> </div>
+      </div>
+      <div id="fre4" class="frePage"> <label class="titleText">VIEW MORE</label>
+        <div class="freBody"> <label>Tap the Catalog button (</label> <img class="freCatalogImage"
+            src="assets/grid_icon.png"> <label>) to check out more styles &#x2022; Tap the Detail button (</label> <img
+            class="freDetailImage" src="assets/zoom_in.svg"> <label>) to view select items in 3D</label> </div>
+      </div>
+      <div id="fre5" class="frePage"> <label class="titleText">SHOP</label> <label class="freBody">Tap the Shop Now
+          button to purchase with size and fit confidence</label> </div>
+    </div>
+    <div id="freDetailBubble" class="unselectable"> <img id="freDetailBubbleArrow" src="assets/bubble_arrow_up.svg">
+      <div id="freDetailBubbleWrapper" class="rounded-element">
+        <div id="freDetailBubblePage" class="frePage"> <label class="freBody">Tap the Detail button to view</label>
+          <label class="freBody">select items in 3D</label>
+        </div>
+      </div>
+    </div>
+    <div id="groups-list-group" class="mdc-list-group mdc-theme--background">
+      <div id="groups-list-header" class="mdc-list-group__subheader"> <img class="nikeLogo" src="assets/Logo_NIKE.svg">
+        <label class="titleText">NIKE VIRTUAL VIEW</label>
+      </div>
+      <ul id="groups-list" class="mdc-image-list"></ul> <button id="groups-list-close-button"
+        class="mdc-button text-button"> <span class="mdc-button__label">Close</span> </button>
+    </div>
+    <div id="detail-view-container" class="unselectable rounded-element"> <button id="detail-close-button"
+        class="mdc-button text-button">
+        <div class="mdc-button__ripple"></div> <span class="mdc-button__label">Close</span>
+      </button> <label id="detail-instructions">Drag your finger to rotate</label> </div>
+  </div>
+  <div id="cookie-message-view">
+    <div class="splash-screen-branding"> <img src="assets/Logo_NIKE.svg"> <span>NIKE VIRTUAL VIEW</span> </div>
+    <div id="cookie-message-wrapper"> <label id="cookie-message-label">We use cookies to ensure you get the best
+        experience on our website. For more information, please see our <a href="privacy/privacy.html">privacy
+          policy</a>.</label> <button id="cookie-message-button" class="mdc-button mdc-button--raised">
+        <div class="mdc-button__ripple"></div> <span id="size-select-button-label"
+          class="mdc-button__label">Accept</span>
+      </button> </div>
+  </div>
+</body>
+
+</html>
