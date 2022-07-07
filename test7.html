@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <title>MainPageTest</title>
 </head>
@@ -20,12 +20,11 @@
         <div class="text-box">
           <h3>Male Golf</h3>
           <p class="demo">
-            <button id="button_img" style="background-image: url('./MAIN/ASSET/GLB/malegolf_fullswing.png');"></button>
+            <button id="button_img" style="background-image: url('./asset/malegolf/malegolf_fullswing.png');"></button>
             <ar-button 
             id="ar-button" 
-            src="./MAIN/ASSET/GLB/malegolf_fullswing.glb"
-            ar
-            ios-src="./MAIN/ASSET/GLB/malegolf_fullswing.usdz"
+            src="./asset/malegolf/malegolf_fullswing.glb"
+            ios-src="./asset/malegolf/malegolf_fullswing.usdz"
             ar-mode="quick-look scene-viewer webxr"
             checkout-title="A 3D model of an astronaut"
             checkout-subtitle="Doesn't feel like a giant. Probably feels very" 
@@ -116,6 +115,13 @@
       </div>
     </div>
   </section>
+  <script type="module" src="https://unpkg.com/@leoncvlt/ar-button"></script>
+  <script>
+    const arButton = document.querySelector("ar-button");
+    arButton.addEventListener("quick-look-button-tapped", () => {
+      window.location.href = "https://westmoon.kr/";
+    });
+  </script>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
