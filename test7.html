@@ -4,307 +4,179 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <title>MainPageTest</title>
+  <title>Document</title>
 </head>
 
 <body>
-  <div>
-    <img src="./MAIN/ASSET/GLB/Westmoon.png" alt="" 
-    style="margin: auto;
-    display: block;
-    flex-shrink: 0;
-    width: 100%;
-    height: 300px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #fff;
-    border-radius: 10px;
-    border: none;">
-  </div>
-  <section>
-    <div class="container reveal">
-      <h2>Caption</h2>
-      <div class="text-container">
-        <div class="text-box">
-          <h3>Male Golf</h3>
-          <p class="demo">
-            <model-viewer id="button_img">
-            <button id="button_img" style="background-image: url('./MAIN/ASSET/GLB/malegolf_fullswing.png');"></button>
-            <ar-button 
-            id="ar-button" 
-            src="https://github.com/D0ngHyeon/DongHyeon.github.io/raw/main/MAIN/ASSET/GLB/malegolf_fullswing.glb">
-            <button onclick="location.href='https:westmoon.kr'">페이지 이동</button>
-            </ar-button>
-            <button>ㅇㅇㅇㅇ</button>
-          </model-viewer>
-          </p>
-        </div>
-        <div class="text-box">
-          <h3>Section Text</h3>
-          <p>
-            <button id="button_img" style="background-image: url('./asset/malegolf/malegolf_fullswing.png');"></button>
-          </p>
-        </div>
-        <div class="text-box">
-          <h3>Section Text</h3>
-          <p>
-            <button id="button_img" style="background-image: url('./asset/malegolf/malegolf_fullswing.png');"></button>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section>
-    <div class="container reveal">
-      <h2>Caption</h2>
-      <div class="text-container">
-        <div class="text-box">
-          <h3>Male Golf</h3>
-          <p class="demo">
-            <button id="button_img" style="background-image: url('./asset/malegolf/malegolf_fullswing.png');"></button>
-            <ar-button 
-            id="ar-button" 
-            src="./asset/malegolf/malegolf_fullswing.glb"       
-            checkout-title="A 3D model of an astronaut"
-            checkout-subtitle="Doesn't feel like a giant. Probably feels very" 
-            price="very small."
-            call-to-action="Go to space" show-if-unsupported>
-            </ar-button>
-          </p>
+  <div class="">
+    <img id="fixedimg" src="./MAIN/ASSET/GLB/Westmoon.png">
+    <div class="container">
+      <model-viewer id="model-viewer" ar ar-mode="webxr quick-look scene-viewer"
+        poster="" src=""
+        reveal="interaction">
+        <button slot="ar-button" id="arbutton"></button>
+        <label for="Malegolf"></label>
+        <div id="controls">
+          <select id="Malegolf">
+            <option value="./MAIN/ASSET/GLB/malegolf_fullswing.glb">fullswing</option>
+            <option value="./MAIN./ASSET./GLB./barbell_squat.glb">Mixer</option>
+            <option value="">Cactus</option>
+          </select>
         </div>
-        <div class="text-box">
-          <h3>Section Text</h3>
-          <p>
-            <button id="button_img" style="background-image: url('./asset/malegolf/malegolf_fullswing.png');"></button>
-          </p>
-        </div>
-        <div class="text-box">
-          <h3>Section Text</h3>
-          <p>
-            <button id="button_img" style="background-image: url('./asset/malegolf/malegolf_fullswing.png');"></button>
-          </p>
-        </div>
-      </div>
+        <button id="pagemove" onclick="location.href='https:westmoon.kr/'">관련 페이지로 이동</button>
+      </model-viewer>
+
+      <model-viewer id="model-viewer" ar ar-mode="webxr quick-look scene-viewer"
+        poster="./asset/malegolf/malegolf_fullswing.png" src="./asset/malegolf/malegolf_fullswing.glb"
+        reveal="interaction">
+        <button slot="ar-button" id="arbutton"></button>
+      </model-viewer>
     </div>
-  </section>
-  <section>
-    <div class="container reveal">
-      <h2>Caption</h2>
-      <div class="text-container">
-        <div class="text-box">
-          <h3>Male Golf</h3>
-          <p class="demo">
-            <button id="button_img" style="background-image: url('./asset/malegolf/malegolf_fullswing.png');"></button>
-            <ar-button 
-            id="ar-button" 
-            src="./asset/malegolf/malegolf_fullswing.glb"           
-            checkout-title="A 3D model of an astronaut"
-            checkout-subtitle="Doesn't feel like a giant. Probably feels very" 
-            price="very small."
-            call-to-action="Go to space" show-if-unsupported>
-            </ar-button>
-          </p>
+  </div>
+
+  <div class="">
+    <img id="fixedimg" src="./asset/png/Westmoon.png">
+    <div class="container">
+      <model-viewer id="model-viewer" ar ar-mode="webxr quick-look scene-viewer"
+        poster="./asset/malegolf/malegolf_fullswing.png" src="./asset/malegolf/malegolf_fullswing.glb"
+        reveal="interaction">
+        <button slot="ar-button" id="arbutton"></button>
+        <label for="Malegolf"></label>
+        <div id="controls">
+          <select id="Malegolf">
+            <option value="./asset/malegolf/malegolf_fullswing.glb">fullswing</option>
+            <option value="">Mixer</option>
+            <option value="">Cactus</option>
+          </select>
         </div>
-        <div class="text-box">
-          <h3>Section Text</h3>
-          <p>
-            <button id="button_img" style="background-image: url('./asset/malegolf/malegolf_fullswing.png');"></button>
-          </p>
-        </div>
-        <div class="text-box">
-          <h3>Section Text</h3>
-          <p>
-            <button id="button_img" style="background-image: url('./asset/malegolf/malegolf_fullswing.png');"></button>
-          </p>
-        </div>
-      </div>
+        <button id="pagemove" onclick="location.href='https:westmoon.kr/'">관련 페이지로 이동</button>
+      </model-viewer>
+
+      <model-viewer id="model-viewer" ar ar-mode="webxr quick-look scene-viewer"
+        poster="./asset/malegolf/malegolf_fullswing.png" src="./asset/malegolf/malegolf_fullswing.glb"
+        reveal="interaction">
+        <button slot="ar-button" id="arbutton"></button>
+      </model-viewer>
     </div>
-  </section>
-  <script type="module" src="https://unpkg.com/@leoncvlt/ar-button"></script>
-  <script>
-    const arButton = document.querySelector("ar-button");
-    arButton.addEventListener("quick-look-button-tapped", () => {
-      window.location.href = "https://westmoon.kr/";
-    });
-  </script>
+  </div>
+
+  <div class="">
+    <img id="fixedimg" src="./asset/png/Westmoon.png">
+    <div class="container">
+      <model-viewer id="model-viewer" ar ar-mode="webxr quick-look scene-viewer"
+        poster="./asset/malegolf/malegolf_fullswing.png" src="./asset/malegolf/malegolf_fullswing.glb"
+        reveal="interaction">
+        <button slot="ar-button" id="arbutton"></button>
+        <label for="Malegolf"></label>
+        <div id="controls">
+          <select id="Malegolf">
+            <option value="./asset/malegolf/malegolf_fullswing.glb">fullswing</option>
+            <option value="./asset/malegolf/barbell_squat.glb">Mixer</option>
+            <option value="">Cactus</option>
+          </select>
+        </div>
+        <button id="pagemove" onclick="location.href='https:westmoon.kr/'">관련 페이지로 이동</button>
+      </model-viewer>
+
+      <model-viewer id="model-viewer" ar ar-mode="webxr quick-look scene-viewer"
+        poster="./asset/malegolf/malegolf_fullswing.png" src="./asset/malegolf/malegolf_fullswing.glb"
+        reveal="interaction">
+        <button slot="ar-button" id="arbutton"></button>
+      </model-viewer>
+    </div>
+  </div>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
-
     * {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: "Asap", sans-serif;
     }
 
     body {
-      background: #363636;
+      overflow: auto;
+      background-color: #363636;
+      padding-top: 200px;
     }
 
-    section {
-      min-height: 0vh;
+    .container {
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    /*동적 생성되는 Section child 배경색 지정 
-    color : 글자색
-    bg : 배경색
-    defalut bg -> body 적용
-    */
-    section:nth-child(1) {
-      color: #e0ffff;
+    .container .box {}
+
+    #fixedimg {
+      position: fixed;
+      width: 100%;
+      height: 200px;
+      top: 0;
+
     }
 
-    section:nth-child(2) {
-      color: #e0ffff;
-      
-    }
-
-    section:nth-child(3) {
-      color: #e0ffff;
-    }
-
-    section:nth-child(4) {
-      color: #e0ffff;
-      
-    }
-
-    section:nth-child(5) {
-      color: #e0ffff;
-    }
-
-    section:nth-child(6) {
-      color: #e0ffff;
-      
-    }
-
-    section:nth-child(7) {
-      color: #e0ffff;
-    }
-
-    section .container {
-      margin: 10px;
-    }
-
-    section h1 {
-      font-size: 3rem;
-      margin: 20px;
-    }
-
-    section h2 {
-      font-size: 40px;
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-    section .text-container {
-      display: flex;
-    }
-
-    section .text-container .text-box {
-      margin: 10px;
-      padding: 10px;
-      
-    }
-
-    section .text-container .text-box h3 {
-      font-size: 30px;
-      text-align: center;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    @media (max-width: 900px) {
-      section h1 {
-        font-size: 2rem;
-        text-align: center;
-      }
-
-      section .text-container {
-        flex-direction: column;
-      }
-    }
-
-    .reveal {
-      position: relative;
-      transform: translateY(150px);
-      opacity: 0;
-      transition: 1s all ease;
-    }
-
-    .reveal.active {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    #button_img {
-      margin: auto;
-      display: block;
-      scroll-snap-align: start;
-      flex-shrink: 0;
-      width: 300px;
+    #model-viewer {
+      margin: 1em;
       height: 300px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: #fff;
-      border-radius: 10px;
+      width: 300px;
+      background-color:azure;
+    }
+
+    #arbutton {
+      height: 300px;
+      width: 300px;
+    }
+
+    #controls {
+      position: absolute;
+      bottom: 12.5px;
+      left: 1em;
+      height: 20px;
+      max-width: unset;
+      transform: unset;
+      border-radius: 100px;
       border: none;
     }
-    #ar-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      cursor: pointer;
-      background-color: #ffffff00;
-      color: #000000;
-      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
-      
-    }
-    .demo{
-      position: relative;
-    }
-    .demo>ar-button {
+
+    #pagemove {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       position: absolute;
-      right: 0rem;
-      bottom: 0rem;
-      width: 100%;
-      height: 100%;
+      bottom: 10px;
+      left: 14em;
+      height: 20px;
+      width: 100px;
+      max-width: unset;
+      transform: unset;
+      border: none;
+      background-color: #363636;
+      border-radius: 100px;
+      color: #e0ffff;
+      text-align: center;
+    }
+
+    #Malegolf {
+      height: 20px;
+      width: 100px;
+      border: none;
+      background-color: #363636;
+      border-radius: 100px;
+      color: #e0ffff;
+    }
+
+    model-viewer[ar-status="not-presenting"]>#ar-button {
+      display: none;
     }
   </style>
-  <script>
-    function reveal() {
-      var reveals = document.querySelectorAll(".reveal");
-
-      for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150;
-
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-        } else {
-          reveals[i].classList.remove("active");
-        }
-      }
-    }
-
-    window.addEventListener("scroll", reveal);
-
-
+  <script type="module">
+    const modelViewer = document.querySelector('#model-viewer');
+    modelViewer.querySelector('#Malegolf').addEventListener('input', (event) => {
+      modelViewer.src = event.target.value;
+    });
   </script>
-  <!--source code : https://alvarotrigo.com/blog/css-animations-scroll/-->
 </body>
 
 </html>
