@@ -19,14 +19,14 @@
         reveal="interaction">
         <button slot="ar-button" id="arbutton"></button>
         <label for="Malegolf"></label>
-        <div id="controls">
+        <div id="btn" class="controls">
           <select id="Malegolf">
             <option value="./MAIN/ASSET/GLB/malegolf_fullswing.glb">fullswing</option>
             <option value="./MAIN./ASSET./GLB./barbell_squat.glb">Mixer</option>
             <option value="">Cactus</option>
           </select>
         </div>
-        <button id="pagemove" onclick="location.href='https:westmoon.kr/'">관련 페이지로 이동</button>
+        <button id="btn"class="pagemove" onclick="location.href='https:westmoon.kr/'">관련 페이지로 이동</button>
       </model-viewer>
 
       <model-viewer id="model-viewer" ar ar-mode="webxr quick-look scene-viewer"
@@ -129,7 +129,7 @@
       width: 300px;
     }
 
-    #controls {
+    .controls {
       position: absolute;
       bottom: 12.5px;
       left: 1em;
@@ -140,7 +140,7 @@
       border: none;
     }
 
-    #pagemove {
+    .pagemove {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -167,7 +167,7 @@
       color: #e0ffff;
     }
 
-    model-viewer[ar-status="not-presenting"]>#ar-button {
+    model-viewer[ar-status="not-presenting"]>#btn {
       display: none;
     }
   </style>
