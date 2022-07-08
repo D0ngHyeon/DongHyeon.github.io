@@ -5,13 +5,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <title>MainPageTest</title>
 </head>
 
 <body>
-  <section>
-    <h1>Scroll Down to Reveal Elements &#8595;</h1>
-  </section>
+  <div>
+    <img src="./MAIN/ASSET/GLB/Westmoon.png" alt="" 
+    style="margin: auto;
+    display: block;
+    flex-shrink: 0;
+    width: 100%;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;">
+  </div>
   <section>
     <div class="container reveal">
       <h2>Caption</h2>
@@ -19,13 +31,15 @@
         <div class="text-box">
           <h3>Male Golf</h3>
           <p class="demo">
+            <model-viewer id="button_img">
             <button id="button_img" style="background-image: url('./MAIN/ASSET/GLB/malegolf_fullswing.png');"></button>
             <ar-button 
             id="ar-button" 
-            src="https://github.com/D0ngHyeon/DongHyeon.github.io/raw/main/MAIN/ASSET/GLB/malegolf_fullswing.glb"
-            onclick="location.href='https:westmoon.kr'"
-            >
+            src="https://github.com/D0ngHyeon/DongHyeon.github.io/raw/main/MAIN/ASSET/GLB/malegolf_fullswing.glb">
+            <button onclick="location.href='https:westmoon.kr'">페이지 이동</button>
             </ar-button>
+            <button>ㅇㅇㅇㅇ</button>
+          </model-viewer>
           </p>
         </div>
         <div class="text-box">
