@@ -19,13 +19,11 @@
         reveal="interaction">
         <button slot="ar-button" class="arbutton"></button>
         <label for="Malegolf"></label>
-        <div class="controls">
           <select id="Malegolf" class="select">
             <option value="./MAIN/ASSET/GLB/malegolf_fullswing.glb">fullswing</option>
             <option value="./MAIN/ASSET/GLB/dumbbell_squat.glb">dumbbell_squat</option>
             <option value="">Cactus</option>
           </select>
-        </div>
         <button class="pagemove" onclick="location.href='https:westmoon.kr/'">관련 페이지로 이동</button>
       </model-viewer>
     </div>
@@ -161,7 +159,6 @@
     }
 
     body {
-      overflow: auto;
       background-color: #363636;
       padding-top: 150px;
     }
@@ -170,7 +167,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      
     }
 
     .container .box {
@@ -201,7 +197,7 @@
       width: 300px;
     }
 
-    .controls {
+    /* .controls {
       position: absolute;
       bottom: 12.5px;
       left: 1em;
@@ -210,7 +206,7 @@
       transform: unset;
       border-radius: 100px;
       border: none;
-    }
+    } */
 
     .pagemove {
       overflow: hidden;
@@ -231,11 +227,16 @@
     }
 
     .select {
+      position: absolute;
+      bottom: 12.5px;
+      left: 1em;
+      max-width: unset;
+      transform: unset;
+      border-radius: 100px;
+      border: none;
       height: 20px;
       width: 100px;
-      border: none;
       background-color: #363636;
-      border-radius: 100px;
       color: #e0ffff;
     }
 
