@@ -58,9 +58,9 @@
       display: none;
     }
     model-viewer{
-      height: 300px;
-      width: 300px;
-      background-color: beige;
+      height: 100%;
+      width: 100%;
+      background-color: #232323;
     }
   </style>
   <model-viewer 
@@ -71,14 +71,14 @@
   camera-orbit="-30deg auto auto" 
   max-camera-orbit="auto 100deg auto" 
   shadow-intensity="1" 
-  camera-controls src="./MAIN/ASSET/GLB/malegolf_fullswing.glb" 
+  camera-controls src="../maleGolf/glb/malegolf_fullswing.glb" 
   alt="A 3D model of an armchair.">
     <div id="controls" class="dim">
       <label for="src">Product:</label>
       <select id="src">
-        <option value="./MAIN/ASSET/GLB/malegolf_fullswing.glb">Chair</option>
-        <option value="./MAIN/ASSET/GLB/freestyle_waacking.glb">Mixer</option>
-        <option value="./MAIN/ASSET/GLB/malegolf_fullswing.glb">Cactus</option>
+        <option value="../maleGolf/glb/malegolf_fullswing.glb">1</option>
+        <option value="../maleGolf/glb/femalegolf_fullswing.glb">2</option>
+        <option value="../maleGolf/glb/hiphop_itzy.glb">3</option>
       </select><br>
     </div>
   </model-viewer>
@@ -88,17 +88,7 @@
     modelViewer.querySelector('#src').addEventListener('input', (event) => {
       modelViewer.src = event.target.value;
     });
-  
-    const checkbox = modelViewer.querySelector('#show-dimensions');
-    checkbox.addEventListener('change', () => {
-      modelViewer.querySelectorAll('button').forEach((hotspot) => {
-        if (checkbox.checked) {
-          hotspot.classList.remove('hide');
-        } else {
-          hotspot.classList.add('hide');
-        }
-      });
-    });
+
   </script>
 </body>
 </html>
