@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-  <title>Male_Golf</title>
+  <title>Squat</title>
 </head>
 
 <body>
@@ -84,18 +84,18 @@
   </style>
   <model-viewer id="modelviewer" ar autoplay ar-modes="webxr scene-viewer quick-look" ar-scale="fixed"
     camera-orbit="-30deg auto auto" max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls
-    src="../maleGolf/glb/malegolf_fullswing.glb" alt="A 3D model of an armchair.">
+    src="../squat/glb/barbell_squat.glb" alt="A 3D model of an armchair.">
     <div id="controls" class="dim">
       <label for="src">Product:</label>
       <select id="src">
-        <option value="../maleGolf/glb/malegolf_fullswing.glb">1</option>
-        <option value="../maleGolf/glb/femalegolf_fullswing.glb">2</option>
+        <option value="../squat/glb/barbell_squat.glb">barbell_squat</option>
+        <option value="../squat/glb/dumbbell_squat.glb">dumbbell_squat</option>
         <option value="../maleGolf/glb/hiphop_itzy.glb">3</option>
       </select><br>
     </div>
     <button slot="ar-button" id="arbutton">ar button custom</button>
-    <button id="Exit" onclick="location.href='../index.html'">≡</button>
-    <button id="westmoonpage" onclick="location.href='https://westmoon.kr/'">관련 페이지로 이동..</button>
+    <button id="Exit" onclick="location.href='../index.html'">≡</button><button id="westmoonpage"
+      onclick="location.href='https://westmoon.kr/'">관련 페이지로 이동..</button>
   </model-viewer>
   <script type="module">
     const modelViewer = document.querySelector('#modelviewer');
