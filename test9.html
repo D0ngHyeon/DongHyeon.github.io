@@ -17,7 +17,7 @@
       <model-viewer id="mv" class="model-viewer" ar ar-mode="webxr quick-look scene-viewer" autoplay
         poster="./MAIN/ASSET/GLB/malegolf_fullswing.png" src="./MAIN/ASSET/GLB/malegolf_fullswing.glb"
         reveal="interaction">
-        <button slot="ar-button" class="arbutton"></button>
+        
         <label for="Malegolf"></label>
           <select id="Malegolf" class="select" type="select">
             <option value="./MAIN/ASSET/GLB/malegolf_fullswing.glb">fullswing</option>
@@ -154,17 +154,19 @@
 
   <style>
     * {
+      max-width: 100%;
       margin: 0;
       padding: 0;
-      width: 100%;  
     }
 
     body {
       background-color: #363636;
       padding-top: 150px;
+      max-width: 100%;
     }
 
     .container {
+      max-width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
