@@ -57,6 +57,11 @@
     :not(:defined) > * {
       display: none;
     }
+    model-viewer{
+      height: 300px;
+      width: 300px;
+      background-color: beige;
+    }
   </style>
   <model-viewer 
   id="dimension-demo" 
@@ -80,7 +85,6 @@
   
   <script type="module">
     const modelViewer = document.querySelector('#dimension-demo');
-  
     modelViewer.querySelector('#src').addEventListener('input', (event) => {
       modelViewer.src = event.target.value;
     });
