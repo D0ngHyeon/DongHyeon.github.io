@@ -10,171 +10,171 @@
 </head>
 
 <body>
-
-  <div class="">
-    <img id="fixedimg" src="./MAIN/ASSET/GLB/Westmoon.png">
-    <div class="container">
-      <model-viewer id="model-viewer" ar ar-mode="webxr quick-look scene-viewer"
-        poster="" src=""
-        reveal="interaction">
-        <button slot="ar-button" id="arbutton"></button>
-        <label for="Malegolf"></label>
-        <div id="btn" class="controls">
-          <select id="Malegolf">
-            <option value="./MAIN/ASSET/GLB/malegolf_fullswing.glb">fullswing</option>
-            <option value="./MAIN./ASSET./GLB./barbell_squat.glb">Mixer</option>
-            <option value="">Cactus</option>
-          </select>
-        </div>
-        <button id="btn"class="pagemove" onclick="location.href='https:westmoon.kr/'">관련 페이지로 이동</button>
-      </model-viewer>
-
-      <model-viewer id="model-viewer" ar ar-mode="webxr quick-look scene-viewer"
-        poster="./asset/malegolf/malegolf_fullswing.png" src="./asset/malegolf/malegolf_fullswing.glb"
-        reveal="interaction">
-        <button slot="ar-button" id="arbutton"></button>
-      </model-viewer>
-    </div>
-  </div>
-
-  <div class="">
-    <img id="fixedimg" src="./asset/png/Westmoon.png">
-    <div class="container">
-      <model-viewer id="model-viewer" ar ar-mode="webxr quick-look scene-viewer"
-        poster="./asset/malegolf/malegolf_fullswing.png" src="./asset/malegolf/malegolf_fullswing.glb"
-        reveal="interaction">
-        <button slot="ar-button" id="arbutton"></button>
-        <label for="Malegolf"></label>
-        <div id="controls">
-          <select id="Malegolf">
-            <option value="./asset/malegolf/malegolf_fullswing.glb">fullswing</option>
-            <option value="">Mixer</option>
-            <option value="">Cactus</option>
-          </select>
-        </div>
-        <button id="pagemove" onclick="location.href='https:westmoon.kr/'">관련 페이지로 이동</button>
-      </model-viewer>
-
-      <model-viewer id="model-viewer" ar ar-mode="webxr quick-look scene-viewer"
-        poster="./asset/malegolf/malegolf_fullswing.png" src="./asset/malegolf/malegolf_fullswing.glb"
-        reveal="interaction">
-        <button slot="ar-button" id="arbutton"></button>
-      </model-viewer>
-    </div>
-  </div>
-
-  <div class="">
-    <img id="fixedimg" src="./asset/png/Westmoon.png">
-    <div class="container">
-      <model-viewer id="model-viewer" ar ar-mode="webxr quick-look scene-viewer"
-        poster="./asset/malegolf/malegolf_fullswing.png" src="./asset/malegolf/malegolf_fullswing.glb"
-        reveal="interaction">
-        <button slot="ar-button" id="arbutton"></button>
-        <label for="Malegolf"></label>
-        <div id="controls">
-          <select id="Malegolf">
-            <option value="./asset/malegolf/malegolf_fullswing.glb">fullswing</option>
-            <option value="./asset/malegolf/barbell_squat.glb">Mixer</option>
-            <option value="">Cactus</option>
-          </select>
-        </div>
-        <button id="pagemove" onclick="location.href='https:westmoon.kr/'">관련 페이지로 이동</button>
-      </model-viewer>
-
-      <model-viewer id="model-viewer" ar ar-mode="webxr quick-look scene-viewer"
-        poster="./asset/malegolf/malegolf_fullswing.png" src="./asset/malegolf/malegolf_fullswing.glb"
-        reveal="interaction">
-        <button slot="ar-button" id="arbutton"></button>
-      </model-viewer>
-    </div>
-  </div>
-
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      overflow: auto;
-      background-color: #363636;
-      padding-top: 200px;
-    }
-
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .container .box {}
-
-    #fixedimg {
-      position: fixed;
-      width: 100%;
-      height: 200px;
-      top: 0;
-
-    }
-
-    #model-viewer {
-      margin: 1em;
-      height: 300px;
-      width: 300px;
-      background-color:azure;
-    }
-
-    #arbutton {
-      height: 300px;
-      width: 300px;
-    }
-
-    .controls {
+    #controls {
       position: absolute;
-      bottom: 12.5px;
-      left: 1em;
-      height: 20px;
+      bottom: 16px;
+      left: 16px;
       max-width: unset;
       transform: unset;
-      border-radius: 100px;
-      border: none;
     }
-
-    .pagemove {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+  
+    .dot{
+      display: block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+      background: #fff;
+      --min-hotspot-opacity: 0;
+    }
+  
+    .dim{
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+      color: rgba(0, 0, 0, 0.8);
+      display: block;
+      font-family: Futura, Helvetica Neue, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      max-width: 128px;
+      overflow-wrap: break-word;
+      padding: 0.5em 1em;
       position: absolute;
-      bottom: 10px;
-      left: 14em;
-      height: 20px;
-      width: 100px;
-      max-width: unset;
-      transform: unset;
-      border: none;
-      background-color: #363636;
-      border-radius: 100px;
-      color: #e0ffff;
-      text-align: center;
+      width: max-content;
+      height: max-content;
+      transform: translate3d(-50%, -50%, 0);
+      --min-hotspot-opacity: 0;
     }
-
-    #Malegolf {
-      height: 20px;
-      width: 100px;
-      border: none;
-      background-color: #363636;
-      border-radius: 100px;
-      color: #e0ffff;
+  
+    .show{
+      --min-hotspot-opacity: 1;
     }
-
-    model-viewer[ar-status="not-presenting"]>#btn {
+  
+    .hide{
+      display: none;
+    }
+    /* This keeps child nodes hidden while the element loads */
+    :not(:defined) > * {
       display: none;
     }
   </style>
+  <model-viewer id="dimension-demo" ar ar-modes="webxr" ar-scale="fixed" camera-orbit="-30deg auto auto" max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls src="../../assets/ShopifyModels/Chair.glb" alt="A 3D model of an armchair.">
+    <button slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></button>
+    <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0" data-normal="1 0 0"></button>
+    <button slot="hotspot-dot+X-Y-Z" class="dot" data-position="1 -1 -1" data-normal="1 0 0"></button>
+    <button slot="hotspot-dim+X-Z" class="dim" data-position="1 0 -1" data-normal="1 0 0"></button>
+    <button slot="hotspot-dot+X+Y-Z" class="dot show" data-position="1 1 -1" data-normal="0 1 0"></button>
+    <button slot="hotspot-dim+Y-Z" class="dim show" data-position="0 -1 -1" data-normal="0 1 0"></button>
+    <button slot="hotspot-dot-X+Y-Z" class="dot show" data-position="-1 1 -1" data-normal="0 1 0"></button>
+    <button slot="hotspot-dim-X-Z" class="dim" data-position="-1 0 -1" data-normal="-1 0 0"></button>
+    <button slot="hotspot-dot-X-Y-Z" class="dot" data-position="-1 -1 -1" data-normal="-1 0 0"></button>
+    <button slot="hotspot-dim-X-Y" class="dim" data-position="-1 -1 0" data-normal="-1 0 0"></button>
+    <button slot="hotspot-dot-X-Y+Z" class="dot" data-position="-1 -1 1" data-normal="-1 0 0"></button>
+  
+    <div id="controls" class="dim">
+      <label for="src">Product:</label>
+      <select id="src">
+        <option value="../../assets/ShopifyModels/Chair.glb">Chair</option>
+        <option value="../../assets/ShopifyModels/Mixer.glb">Mixer</option>
+        <option value="../../assets/ShopifyModels/GeoPlanter.glb">Cactus</option>
+      </select><br>
+  
+      <label for="show-dimensions">Show Dimensions:</label>
+      <input id="show-dimensions" type="checkbox" checked="true">
+    </div>
+  </model-viewer>
+  
   <script type="module">
-    const modelViewer = document.querySelector('#model-viewer');
-    modelViewer.querySelector('#Malegolf').addEventListener('input', (event) => {
+    const modelViewer = document.querySelector('#dimension-demo');
+  
+    modelViewer.querySelector('#src').addEventListener('input', (event) => {
       modelViewer.src = event.target.value;
+    });
+  
+    const checkbox = modelViewer.querySelector('#show-dimensions');
+    checkbox.addEventListener('change', () => {
+      modelViewer.querySelectorAll('button').forEach((hotspot) => {
+        if (checkbox.checked) {
+          hotspot.classList.remove('hide');
+        } else {
+          hotspot.classList.add('hide');
+        }
+      });
+    });
+  
+    modelViewer.addEventListener('load', () => {
+      const center = modelViewer.getCameraTarget();
+      const size = modelViewer.getDimensions();
+      const x2 = size.x / 2;
+      const y2 = size.y / 2;
+      const z2 = size.z / 2;
+  
+      modelViewer.updateHotspot({
+        name: 'hotspot-dot+X-Y+Z',
+        position: `${center.x + x2} ${center.y - y2} ${center.z + z2}`
+      });
+  
+      modelViewer.updateHotspot({
+        name: 'hotspot-dim+X-Y',
+        position: `${center.x + x2} ${center.y - y2} ${center.z}`
+      });
+      modelViewer.querySelector('button[slot="hotspot-dim+X-Y"]').textContent =
+          `${(size.z * 100).toFixed(0)} cm`;
+  
+      modelViewer.updateHotspot({
+        name: 'hotspot-dot+X-Y-Z',
+        position: `${center.x + x2} ${center.y - y2} ${center.z - z2}`
+      });
+  
+      modelViewer.updateHotspot({
+        name: 'hotspot-dim+X-Z',
+        position: `${center.x + x2} ${center.y} ${center.z - z2}`
+      });
+      modelViewer.querySelector('button[slot="hotspot-dim+X-Z"]').textContent =
+          `${(size.y * 100).toFixed(0)} cm`;
+  
+      modelViewer.updateHotspot({
+        name: 'hotspot-dot+X+Y-Z',
+        position: `${center.x + x2} ${center.y + y2} ${center.z - z2}`
+      });
+  
+      modelViewer.updateHotspot({
+        name: 'hotspot-dim+Y-Z',
+        position: `${center.x} ${center.y + y2} ${center.z - z2}`
+      });
+      modelViewer.querySelector('button[slot="hotspot-dim+Y-Z"]').textContent =
+          `${(size.x * 100).toFixed(0)} cm`;
+  
+      modelViewer.updateHotspot({
+        name: 'hotspot-dot-X+Y-Z',
+        position: `${center.x - x2} ${center.y + y2} ${center.z - z2}`
+      });
+  
+      modelViewer.updateHotspot({
+        name: 'hotspot-dim-X-Z',
+        position: `${center.x - x2} ${center.y} ${center.z - z2}`
+      });
+      modelViewer.querySelector('button[slot="hotspot-dim-X-Z"]').textContent =
+          `${(size.y * 100).toFixed(0)} cm`;
+  
+      modelViewer.updateHotspot({
+        name: 'hotspot-dot-X-Y-Z',
+        position: `${center.x - x2} ${center.y - y2} ${center.z - z2}`
+      });
+  
+      modelViewer.updateHotspot({
+        name: 'hotspot-dim-X-Y',
+        position: `${center.x - x2} ${center.y - y2} ${center.z}`
+      });
+      modelViewer.querySelector('button[slot="hotspot-dim-X-Y"]').textContent =
+          `${(size.z * 100).toFixed(0)} cm`;
+  
+      modelViewer.updateHotspot({
+        name: 'hotspot-dot-X-Y+Z',
+        position: `${center.x - x2} ${center.y - y2} ${center.z + z2}`
+      });
     });
   </script>
 </body>
