@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +9,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <title>Male_Golf</title>
 </head>
+
 <body>
   <style>
     html,
-      body {
-        width: 100%;
-        height: 100%;
-      }
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
     #controls {
       position: absolute;
       bottom: 16px;
@@ -22,14 +25,20 @@
       max-width: unset;
       transform: unset;
     }
-    #Exit{
+
+    #Exit {
+      top: 16px;
+      right: 16px;
       text-align: center;
       border-radius: 4px;
+      position: absolute;
     }
-    #westmoonpage{
+
+    #westmoonpage {
+
       position: absolute;
       bottom: 16px;
-      left: 70%;
+      right: 16px;
       max-width: unset;
       transform: unset;
       background: #fff;
@@ -41,9 +50,18 @@
       max-width: 128px;
       overflow-wrap: break-word;
       position: absolute;
-      
     }
-    .dim{
+
+    #arbutton {
+      background-color: white;
+      border-radius: 4px;
+      border: none;
+      position: absolute;
+      top: 16px;
+      left: 16px;
+    }
+
+    .dim {
       background: #fff;
       border-radius: 4px;
       display: block;
@@ -57,23 +75,16 @@
       height: max-content;
       transform: translate3d(-50%, -50%, 0);
     }
-    model-viewer{
-      height:100%;
+
+    model-viewer {
+      height: 100%;
       width: 100%;
-      background-color: #232323;  
+      background-color: #232323;
     }
   </style>
-  <model-viewer 
-  id="malegolf" 
-  ar 
-  ar-modes="webxr scene-viewer quick-look" 
-  ar-scale="fixed" 
-  camera-orbit="-30deg auto auto" 
-  max-camera-orbit="auto 100deg auto" 
-  shadow-intensity="1" 
-  camera-controls 
-  src="../maleGolf/glb/malegolf_fullswing.glb" 
-  alt="A 3D model of an armchair.">
+  <model-viewer id="malegolf" ar autoplay ar-modes="webxr scene-viewer quick-look" ar-scale="fixed"
+    camera-orbit="-30deg auto auto" max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls
+    src="../maleGolf/glb/malegolf_fullswing.glb" alt="A 3D model of an armchair.">
     <div id="controls" class="dim">
       <label for="src">Product:</label>
       <select id="src">
@@ -82,8 +93,9 @@
         <option value="../maleGolf/glb/hiphop_itzy.glb">3</option>
       </select><br>
     </div>
-    <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">ar button custom</button>
-    <button id="Exit" onclick="location.href='../index.html'">X</button><button id="westmoonpage" onclick="location.href='https://westmoon.kr/'">관련 페이지로 이동..</button>
+    <button slot="ar-button" id="arbutton">ar button custom</button>
+    <button id="Exit" onclick="location.href='../index.html'">X</button><button id="westmoonpage"
+      onclick="location.href='https://westmoon.kr/'">관련 페이지로 이동..</button>
   </model-viewer>
   <script type="module">
     const modelViewer = document.querySelector('#malegolf');
@@ -92,4 +104,5 @@
     });
   </script>
 </body>
+
 </html>
