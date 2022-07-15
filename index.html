@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,89 +8,134 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <title>Main</title>
 </head>
+
 <body>
   <style>
-    body{
+    body {
       padding-top: 150px;
+      background-color: #232323;
     }
-    #menu{
+
+    #menu {
       position: fixed;
+      left: 50%;
+      transform: translate(-50%, 0%);
       top: 0;
       height: 150px;
+      width: auto;
+      z-index: 20;
+      
+    }
+
+    .img {
+      margin: 0;
       width: 100%;
-      z-index:20;
+      height: 100%;
     }
-    .container{
+
+    .container {
       display: flex;
-      justify-content: center;   
+      justify-content: center;
     }
-    .button{
-      width: 45%;
-      height: auto;
-      padding: 0;
+
+    .button {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      padding-bottom:20px;
       margin: 10px;
       float: left;
+      border: 0;
+      border-radius: 0px 0px 20px 20px;
+      background-color:#FFF;
     }
-    .button >img{
-      width: 45%;
+
+    .box {
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+      width: 100%;
+      height: 30px;
+      display: table;
+    }
+
+    .box>p {
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      font-size: 25px;
+      font-weight: 700;
+      background-color: #FFF;
+      border-radius: 0px 0px 20px 20px;
     }
   </style>
   <img id="menu" src="./WestMoon/Westmoon.png" alt="Westmoon logo">
+
   <div class="container">
-  <button class="button" onclick="location.href='./html/MaleGolf.html'">
-    <img src="./maleGolf/png/malegolf_fullswing.png" alt="">
-  </button>
-  <button class="button" onclick="location.href='./html/squat.html'">
-    <img src="./maleGolf/png/malegolf_fullswing.png" alt="">
-  </button>
-</div>
-<div class="container">
-  <button class="button" onclick="location.href='./html/test2.html'">
-    <img src="./maleGolf/png/malegolf_fullswing.png" alt="">test
-  </button>
-  <button class="button" onclick="location.href='./html/test3.html'">
-    <img src="./maleGolf/png/malegolf_fullswing.png" alt="">test2
-  </button>
-</div>
-<div class="container">
-  <button class="button" onclick="location.href='./html/MaleGolf.html'">
-    <img src="./maleGolf/png/malegolf_fullswing.png" alt="">
-  </button>
-  <button class="button" onclick="location.href='./html/squat.html'">
-    <img src="./maleGolf/png/malegolf_fullswing.png" alt="">
-  </button>
-</div>
-<div class="container">
-  <button class="button" onclick="location.href='./html/MaleGolf.html'">
-    <img src="./maleGolf/png/malegolf_fullswing.png" alt="">
-  </button>
-  <button class="button" onclick="location.href='./html/squat.html'">
-    <img src="./maleGolf/png/malegolf_fullswing.png" alt="">
-  </button>
-</div>
-<div class="container">
-  <button class="button" onclick="location.href='./html/MaleGolf.html'">
-    <img src="./maleGolf/png/malegolf_fullswing.png" alt="">
-  </button>
-  <button class="button" onclick="location.href='./html/squat.html'">
-    <img src="./maleGolf/png/malegolf_fullswing.png" alt="">
-  </button>
-</div>
-<div class="container">
-  <button class="button" onclick="location.href='./html/MaleGolf.html'">
-    <img src="./maleGolf/png/malegolf_fullswing.png" alt="">
-  </button>
-  <button class="button" onclick="location.href='./html/squat.html'">
-    <img src="./maleGolf/png/malegolf_fullswing.png" alt="">
-  </button>
-</div>
-<div class="container">
-  <button class="button" onclick="location.href='./html/MaleGolf.html'">
-    <img src="./maleGolf/png/malegolf_fullswing.png" alt="">
-  </button>
-  <button class="button" onclick="location.href='./html/squat.html'">
-    <img src="./maleGolf/png/malegolf_fullswing.png" alt="">
-  </button>
-</div>
+    <button class="button" type="button" onclick="location.href='./html/Golf.html'">
+      <img class="img" src="./Golf/img/golf_img.webp" alt="Golf">
+      <div class="box">
+        <p>Golf</p>
+      </div>
+    </button>
+
+    <button class="button" onclick="location.href='./html/squat.html'">
+      <img class="img" src="./Golf/img/golf_img.webp" alt="">
+      <div class="box">
+        <p>squat</p>
+      </div>
+    </button>
+  </div>
+  <div class="container">
+    <button class="button" type="button" onclick="location.href='./html/Golf.html'">
+      <img class="img" src="./Golf/img/golf_img.webp" alt="Golf">
+      <div class="box">
+        <p>Golf</p>
+      </div>
+    </button>
+
+    <button class="button" onclick="location.href='./html/squat.html'">
+      <img class="img" src="./Golf/img/golf_img.webp" alt="">
+      <div class="box">
+        <p>squat</p>
+      </div>
+    </button>
+  </div>
+  <div class="container">
+    <button class="button" type="button" onclick="location.href='./html/Golf.html'">
+      <img class="img" src="./Golf/img/golf_img.webp" alt="Golf">
+      <div class="box">
+        <p>Golf</p>
+      </div>
+    </button>
+
+    <button class="button" onclick="location.href='./html/squat.html'">
+      <img class="img" src="./Golf/img/golf_img.webp" alt="">
+      <div class="box">
+        <p>squat</p>
+      </div>
+    </button>
+  </div>
+  <div class="container">
+    <button class="button" type="button" onclick="location.href='./html/Golf.html'">
+      <img class="img" src="./Golf/img/golf_img.webp" alt="Golf">
+      <div class="box">
+        <p>Golf</p>
+      </div>
+    </button>
+
+    <button class="button" onclick="location.href='./html/squat.html'">
+      <img class="img" src="./Golf/img/golf_img.webp" alt="">
+      <div class="box">
+        <p>squat</p>
+      </div>
+    </button>
+  </div>
+
+ 
+
+
+
 </body>
+
 </html>
