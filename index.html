@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="./css/font.css">
   <title>Main</title>
 </head>
 
@@ -13,24 +14,39 @@
   <style>
     body {
       padding-top: 150px;
-      background-color: #232323;
+      background-color: #353535;
     }
 
     #menu {
       position: fixed;
+      top: 0px;
       left: 50%;
-      transform: translate(-50%, 0%);
-      top: 0;
-      height: 150px;
+      height: 110px;
+      padding: 20px 50% 20px 50%;
       width: auto;
+      transform: translate(-50%, 0%);
       z-index: 20;
-      
+      background-color: #353535;
     }
+    /* .menu{
+      position:absolute;
+      top:0;
+      width: 200px;
+      height: 130px;
+      background-color: #353535;
+      z-index: 20;
+    } */
 
     .img {
+      position: absolute;
+      left: 0;
+      top: 0;
       margin: 0;
       width: 100%;
-      height: 100%;
+      height: 84%;
+      border:0;
+      z-index: 10;
+      border-radius: 20px 20px 0 0;
     }
 
     .container {
@@ -41,36 +57,38 @@
     .button {
       position: relative;
       width: 200px;
-      height: 200px;
-      padding-bottom:20px;
-      margin: 10px;
+      height: 180px;
+      margin: 10px 10px 20px 10px;
       float: left;
       border: 0;
-      border-radius: 0px 0px 20px 20px;
-      background-color:#FFF;
+      border-radius: 20px;
+      background-color: #353535;
+      box-shadow: 0.5px 0.5px 0.5px #535353;
     }
 
     .box {
       position: absolute;
       left: 0;
-      bottom: 0px;
+      bottom: 0;
       width: 100%;
-      height: 30px;
+      height: 20px;
       display: table;
     }
 
     .box>p {
-      text-align: center;
+      text-align: left;
       display: table-cell;
-      vertical-align: middle;
-      font-size: 25px;
-      font-weight: 700;
-      background-color: #FFF;
-      border-radius: 0px 0px 20px 20px;
+      font-size: 2em;
+      font-weight: normal;
+      border-radius: 0 0 10px 10px;
+      background-color: rgba( 255, 255, 255, 0 );
+      color: #fff ;
+      text-indent: 15px;
     }
   </style>
-  <img id="menu" src="./WestMoon/Westmoon.png" alt="Westmoon logo">
-
+  <div class="">
+  <img id="menu" src="./WestMoon/westmoon logo.png" alt="Westmoon logo">
+</div>
   <div class="container">
     <button class="button" type="button" onclick="location.href='./html/Golf.html'">
       <img class="img" src="./Golf/img/golf_img.webp" alt="Golf">
@@ -82,7 +100,7 @@
     <button class="button" onclick="location.href='./html/squat.html'">
       <img class="img" src="./Golf/img/golf_img.webp" alt="">
       <div class="box">
-        <p>squat</p>
+        <p>Squat</p>
       </div>
     </button>
   </div>
@@ -97,7 +115,7 @@
     <button class="button" onclick="location.href='./html/squat.html'">
       <img class="img" src="./Golf/img/golf_img.webp" alt="">
       <div class="box">
-        <p>squat</p>
+        <p>Squat</p>
       </div>
     </button>
   </div>
@@ -112,7 +130,7 @@
     <button class="button" onclick="location.href='./html/squat.html'">
       <img class="img" src="./Golf/img/golf_img.webp" alt="">
       <div class="box">
-        <p>squat</p>
+        <p>Squat</p>
       </div>
     </button>
   </div>
@@ -127,7 +145,7 @@
     <button class="button" onclick="location.href='./html/squat.html'">
       <img class="img" src="./Golf/img/golf_img.webp" alt="">
       <div class="box">
-        <p>squat</p>
+        <p>Squat</p>
       </div>
     </button>
   </div>
