@@ -7,14 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link rel="stylesheet" href="../css/font.css">
-  
+
   <title>WestMoon</title>
 </head>
 
 <body>
   <style>
-    
-
     html,
     body {
       width: 100%;
@@ -84,12 +82,14 @@
       text-align: center;
     }
 
+
     model-viewer {
       position: relative;
       height: 100%;
       width: 100%;
       z-index: 1;
     }
+
     @media (prefers-color-scheme: dark) {
       body {
         background-color: #fff;
@@ -101,8 +101,8 @@
       }
 
       select {
-        background-color:  #353535;
-        border: 0  #353535;
+        background-color: #353535;
+        border: 0 #353535;
         color: #fff;
       }
 
@@ -111,7 +111,7 @@
         color: #fff;
       }
 
-      #arbutton{
+      #arbutton {
         background-color: rgba(0, 0, 0, 1);
         color: #fff;
       }
@@ -119,8 +119,9 @@
     }
   </style>
 
-  <model-viewer id="modelviewer" ar autoplay ar-modes="webxr quick-look" shadow-intensity="1"
-    camera-controls loading="eager" src="./Golf/glb/malegolf_fullswing.glb"  alt="A 3D model of an armchair.">
+  <model-viewer id="modelviewer" ar autoplay ar-modes="webxr quick-look" shadow-intensity="1" camera-controls
+    loading="eager" src="./Golf/glb/malegolf_fullswing.glb" alt="A 3D model of an armchair.">
+
     <div class="bar"></div>
     <div class="select">
       <label for="src"></label>
@@ -139,7 +140,6 @@
     modelViewer.querySelector('#src').addEventListener('input', (event) => {
       modelViewer.src = event.target.value;
 
-      
     });
   </script>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>

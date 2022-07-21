@@ -80,22 +80,13 @@
       button on the bottom right of the image to see a friendly, blocky astronaut in your space
     </p>
     <div class="demo">
-      <img src="https://source.unsplash.com/kvHhSroTNPY/960x540" />
-      <ar-button
-        id="ar-button"
-        src="https://github.com/leoncvlt/ar-button/raw/master/assets/Astronaut.glb"
-        ios-src="https://github.com/leoncvlt/ar-button/raw/master/assets/Astronaut.usdz"
-        link="https://www.nasa.gov/"
-        title="A 3D model of an astronaut"
-        checkout-title="A 3D model of an astronaut"
-        checkout-subtitle="Doesn't feel like a giant. Probably feels very"
-        price="very small."
-        call-to-action="Go to space"
-        show-if-unsupported
+      <model-viewer
+      style="width: 200px; height:300px;"
+      ar
+      src="https://github.com/D0ngHyeon/DongHyeon.github.io/raw/main/Golf/glb/femalegolf_fullswing.glb"
       >
-        <span class="prompt">See in <b>Augmented Reality</b></span>
-        <span class="unsupported">Your device does not support AR</span>
-      </ar-button>
+
+      </model-viewer>
     </div>
 
     <script type="module" src="https://unpkg.com/@leoncvlt/ar-button"></script>
