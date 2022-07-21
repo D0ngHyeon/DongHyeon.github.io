@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link rel="stylesheet" href="../css/font.css">
+  
   <title>WestMoon</title>
 </head>
 
@@ -114,12 +114,12 @@
 
       .select {
         background-color: #353535;
-        border: 0;
+        border: 0 #353535;
       }
 
       select {
         background-color:  #353535;
-        border: 0;
+        border: 0  #353535;
         color: #fff;
       }
 
@@ -133,8 +133,8 @@
     }
   </style>
 
-  <model-viewer id="modelviewer" ar autoplay ar-modes="webxr scene-viewer quick-look" shadow-intensity="1"
-    camera-controls loading="eager" src="./Golf/glb/malegolf_fullswing.glb" ios-src="./Golf/glb/malegolf_fullswing.usdz" alt="A 3D model of an armchair.">
+  <model-viewer id="modelviewer" ar autoplay  shadow-intensity="1"
+    camera-controls loading="eager" src="./Golf/glb/malegolf_fullswing.glb"  alt="A 3D model of an armchair.">
     <div id="error" class="hide">AR is not supported on this device</div>
     <div class="bar"></div>
     <div class="select">
@@ -165,6 +165,7 @@
       });
     });
   </script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </body>
 
 </html>
