@@ -84,23 +84,6 @@
       text-align: center;
     }
 
-    #error {
-      background-color: #ffffffdd;
-      border-radius: 16px;
-      padding: 16px;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate3d(-50%, -50%, 0);
-      transition: opacity 0.3s;
-    }
-
-    #error.hide {
-      opacity: 0;
-      visibility: hidden;
-      transition: visibility 2s, opacity 1s 1s;
-    }
-
     model-viewer {
       position: relative;
       height: 100%;
@@ -128,14 +111,16 @@
         color: #fff;
       }
 
-      #arbutton{}
+      #arbutton{
+        background-color: rgba(0, 0, 0, 1);
+        color: #fff;
+      }
 
     }
   </style>
 
   <model-viewer id="modelviewer" ar autoplay ar-modes="webxr quick-look" shadow-intensity="1"
     camera-controls loading="eager" src="./Golf/glb/malegolf_fullswing.glb"  alt="A 3D model of an armchair.">
-    <div id="error" class="hide">AR is not supported on this device</div>
     <div class="bar"></div>
     <div class="select">
       <label for="src"></label>
@@ -154,15 +139,7 @@
     modelViewer.querySelector('#src').addEventListener('input', (event) => {
       modelViewer.src = event.target.value;
 
-      document.querySelector("#model-viewer").addEventListener('ar-status', (event) => {
-        if (event.detail.status === 'failed') {
-          const error = document.querySelector("#error");
-          error.classList.remove('hide');
-          error.addEventListener('transitionend', (event) => {
-            error.classList.add('hide');
-          });
-        }
-      });
+      
     });
   </script>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
