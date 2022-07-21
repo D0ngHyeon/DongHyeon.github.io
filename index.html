@@ -5,155 +5,137 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-  <link rel="stylesheet" href="./css/font.css">
-  <title>Main</title>
+  <link rel="stylesheet" href="../css/font.css">
+  <title>Male_Golf</title>
 </head>
 
 <body>
   <style>
+    html,
     body {
-      padding-top: 100px;
-      background-color: #353535;
-    }
 
-    #menu {
-      position: fixed;
-      top: 0px;
-      left: 50%;
-      height: 80px;
-      padding: 20px 50% 20px 50%;
-      width: auto;
-      transform: translate(-50%, 0%);
-      z-index: 20;
-      background-color: #353535;
-    }
-    /* .menu{
-      position:absolute;
-      top:0;
-      width: 200px;
-      height: 130px;
-      background-color: #353535;
-      z-index: 20;
-    } */
-
-    .img {
-      position: absolute;
-      left: 0;
-      top: 0;
-      margin: 0;
       width: 100%;
-      height: 84%;
-      border:0;
-      z-index: 10;
-      border-radius: 20px 20px 0 0;
+      height: 100%;
     }
 
-    .container {
-      display: flex;
-      justify-content: center;
-    }
-
-    .button {
-      position: relative;
-      width: 200px;
-      height: 180px;
-      margin: 10px 10px 20px 10px;
-      float: left;
-      border: 0;
-      border-radius: 20px;
-      background-color: #353535;
-      box-shadow: 0.5px 0.5px 0.5px #535353;
-    }
-
-    .box {
+    #controls {
       position: absolute;
-      left: 0;
       bottom: 0;
+    }
+
+    #westmoonpage {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 80px;
+      border-radius: 20px 0 0 0;
+      border: 0;
+      font-size: 16px;
+      font-weight: 900;
+      width: 50%;
+      overflow-wrap: break-word;
+      position: absolute;
+      color: #fff;
+      background-color: #353535;
+    }
+
+    #arbutton {
+      background-color: rgba(255,255,255,0);
+      border-radius: 30px;
+      border: 1px solid black;
+      height: 5%;
+      width: 30%;
+      position: absolute;
+      bottom: 30%;
+      right: 35%;
+      font-size: 12px;
+      z-index: 2;
+    }
+
+    select {
+      position: absolute;
+      bottom: 25%;
+      height: 50%;
+      left: 10%;
+      width: 80%;
+      border:0;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 900;
+    }
+    .select{
+      border: 1px solid black;
+      background-color: #fff;
+      height: 70px;
+      border-radius: 30px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: 10px;
+      width: 40%;
+      overflow-wrap: break-word;
+      text-align: center;
+    }
+    #error {
+    background-color: #ffffffdd;
+    border-radius: 16px;
+    padding: 16px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    transition: opacity 0.3s;
+  }
+  
+  #error.hide {
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 2s, opacity 1s 1s;
+  }
+
+    model-viewer {
+      position: relative;
+      height: 100%;
       width: 100%;
-      height: 20px;
-      display: table;
-    }
 
-    .box>p {
-      text-align: left;
-      display: table-cell;
-      font-size: 2em;
-      font-weight: normal;
-      border-radius: 0 0 10px 10px;
-      background-color: rgba( 255, 255, 255, 0 );
-      color: #fff ;
-      text-indent: 15px;
     }
+    
+    
   </style>
-  <div class="">
-  <img id="menu" src="./WestMoon/westmoon logo.png" alt="Westmoon logo">
-</div>
-  <div class="container">
-    <button class="button" type="button" onclick="location.href='./html/Golf.html'">
-      <img class="img" src="./Golf/img/golf_img.webp" alt="Golf">
-      <div class="box">
-        <p>Golf</p>
-      </div>
-    </button>
 
-    <button class="button" type="button" onclick="location.href='./html/squat.html'">
-      <img class="img" src="./Golf/img/golf_img.webp" alt="">
-      <div class="box">
-        <p>Squat</p>
-      </div>
-    </button>
-  </div>
-  <div class="container">
-    <button class="button" type="ar-button" onclick="location.href='./html/Golf.html'">
-      <img class="img" src="./Golf/img/golf_img.webp" alt="Golf">
-      <div class="box">
-        <p>Golf</p>
-      </div>
-    </button>
+  <model-viewer id="modelviewer" ar autoplay ar-modes="webxr scene-viewer quick-look" shadow-intensity="1"
+    camera-controls loading="eager" src="../Golf/glb/malegolf_fullswing.glb" alt="A 3D model of an armchair.">
+    <div id="error" class="hide">AR is not supported on this device</div>
+    <div class="bar"></div>
+    <div class="select">
+      <label for="src"></label>
+      <select id="src">
+        <option value="../Golf/glb/malegolf_fullswing.glb" selected="selected">Male Golf</option>
+        <option value="../Golf/glb/femalegolf_fullswing.glb">Female Golf</option>
+        <option value="../Golf/glb/hiphop_itzy.glb">Hiphop_itzy </option>
+      </select>
+    </div>
+    <button slot="ar-button" id="arbutton">👋 Activate AR</button>
+    <button id="westmoonpage" onclick="location.href='https://westmoon.kr/'">관련 페이지로 이동..</button>
+  </model-viewer>
+  <script type="module">
+    const modelViewer = document.querySelector('#modelviewer');
+    modelViewer.querySelector('#src').addEventListener('input', (event) => {
+      modelViewer.src = event.target.value;
 
-    <button class="button" onclick="location.href='./html/squat.html'">
-      <img class="img" src="./Golf/img/golf_img.webp" alt="">
-      <div class="box">
-        <p>Squat</p>
-      </div>
-    </button>
-  </div>
-  <div class="container">
-    <button class="button" type="button" onclick="location.href='./html/Golf.html'">
-      <img class="img" src="./Golf/img/golf_img.webp" alt="Golf">
-      <div class="box">
-        <p>Golf</p>
-      </div>
-    </button>
-
-    <button class="button" onclick="location.href='./html/squat.html'">
-      <img class="img" src="./Golf/img/golf_img.webp" alt="">
-      <div class="box">
-        <p>Squat</p>
-      </div>
-    </button>
-  </div>
-  <div class="container">
-    <button class="button" type="button" onclick="location.href='./html/Golf.html'">
-      <img class="img" src="./Golf/img/golf_img.webp" alt="Golf">
-      <div class="box">
-        <p>Golf</p>
-      </div>
-    </button>
-
-    <button class="button" onclick="location.href='./html/squat.html'">
-      <img class="img" src="./Golf/img/golf_img.webp" alt="">
-      <div class="box">
-        <p>Squat</p>
-      </div>
-    </button>
-  </div>
-
- 
-
-
-
+      document.querySelector("#model-viewer").addEventListener('ar-status', (event) => {
+        if (event.detail.status === 'failed') {
+          const error = document.querySelector("#error");
+          error.classList.remove('hide');
+          error.addEventListener('transitionend', (event) => {
+            error.classList.add('hide');
+          });
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
