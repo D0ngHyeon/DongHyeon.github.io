@@ -62,7 +62,7 @@
       height: 50%;
       left: 10%;
       width: 80%;
-      border: 0;
+      border: 0 #fff;
       text-align: center;
       font-size: 16px;
       font-weight: 900;
@@ -119,6 +119,7 @@
 
       select {
         background-color:  #353535;
+        border: 0;
         color: #fff;
       }
 
@@ -133,7 +134,7 @@
   </style>
 
   <model-viewer id="modelviewer" ar autoplay ar-modes="webxr scene-viewer quick-look" shadow-intensity="1"
-    camera-controls loading="eager" src="./Golf/glb/malegolf_fullswing.glb" alt="A 3D model of an armchair.">
+    camera-controls loading="eager" src="./Golf/glb/malegolf_fullswing.glb" ios-src="./Golf/glb/malegolf_fullswing.usdz" alt="A 3D model of an armchair.">
     <div id="error" class="hide">AR is not supported on this device</div>
     <div class="bar"></div>
     <div class="select">
@@ -142,6 +143,7 @@
         <option value="./Golf/glb/malegolf_fullswing.glb" selected="selected">Male Golf</option>
         <option value="./Golf/glb/femalegolf_fullswing.glb">Female Golf</option>
         <option value="./Golf/glb/hiphop_itzy.glb">Hiphop_itzy </option>
+        <option value="./Golf/glb/malegolf_fullswing.usdz">Male Golf_usdz </option>
       </select>
     </div>
     <button slot="ar-button" id="arbutton">Activate AR</button>
