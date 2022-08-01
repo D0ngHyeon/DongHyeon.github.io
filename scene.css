@@ -1,0 +1,127 @@
+@import url(//fonts.googleapis.com/css?family=Roboto);
+
+body,
+html {
+  height: 100%
+}
+
+.viewer_body {
+  margin: 0;
+  overflow: hidden
+}
+
+.viewer_canvas {
+  touch-action: none;
+  width: 100%;
+  height: 100%
+}
+
+.add_button {
+  display: none;
+  padding: 16px 32px;
+  margin: 16px 32px;
+  font-size: 32px
+}
+
+.gltf-validation {
+  color: #fff;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  bottom: 0;
+  font-family: Roboto
+}
+
+.error-message {
+  display: flex
+}
+
+.validation-header {
+  padding: 5px 20px 5px 10px;
+  cursor: pointer
+}
+
+.toggle-button {
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 15px solid #fff;
+  margin: 5px 10px 0 0
+}
+
+.toggle-rotate {
+  transform: rotate(180deg)
+}
+
+.validation-output {
+  transition: max-height .3s ease-in-out;
+  max-height: 0;
+  padding: 0 10px 0 10px
+}
+
+.validation-output-open {
+  transition: max-height .3s ease-in-out;
+  height: auto;
+  max-height: 250px;
+  padding-bottom: 10px;
+  overflow-y: auto
+}
+
+.validation-toggle {
+  display: inline-block;
+  position: absolute;
+  right: 0
+}
+
+.validation-toggle-rtl {
+  display: inline-block;
+  position: absolute;
+  left: 0
+}
+
+.validation-header-label {
+  display: inline-block
+}
+
+.severity {
+  padding-right: 10px
+}
+
+.severity-rtl {
+  padding-left: 10px
+}
+
+.validation-overview {
+  position: absolute;
+  right: 0;
+  padding-right: 10px
+}
+
+.severity-error {
+  color: #f44336
+}
+
+.severity-warning {
+  color: #ffeb3b
+}
+
+.error-pointer {
+  color: #ccddcc;
+  margin-left: auto
+}
+
+.error-pointer-rtl {
+  color: #ccddcc;
+  margin-right: auto
+}
+
+.sandbox_body {
+  margin: 0;
+  overflow: hidden
+}
+
+.sandbox {
+  display: block;
+  border: none;
+  width: 100vw;
+  height: 100%
+}
